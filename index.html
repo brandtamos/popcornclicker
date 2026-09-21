@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marcy's Popcorn Clicker</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+  <header class="marquee">
+    <div class="bulbs"></div>
+    <h1>🍿 Marcy's Popcorn Clicker</h1>
+    <p class="tagline">Now Showing · An Idle Empire of Popped Perfection</p>
+    <div class="bulbs bottom"></div>
+  </header>
+
+  <main class="grid">
+    <section class="left panel">
+      <div class="left-top">
+      <div class="clicker-col">
+      <div class="bank">
+        <div class="bank-num" id="bank">0</div>
+        <div class="bank-label">popcorn in the tub</div>
+        <div class="cps" id="cps">0.0 per second</div>
+      </div>
+
+      <div class="clicker-wrap">
+        <button class="clicker" id="clicker" aria-label="Pop popcorn"><span class="bucket">🍿</span></button>
+        <div class="click-hint">Tap the tub to pop! <span id="clickval">+1</span> each</div>
+        <div class="buff" id="buff"></div>
+      </div>
+
+      <div class="controls">
+        <div class="buymode" role="group" aria-label="Buy quantity">
+          <span>Buy</span>
+          <button data-buy="1" class="on">×1</button>
+          <button data-buy="10">×10</button>
+          <button data-buy="100">×100</button>
+          <button data-buy="max">Max</button>
+        </div>
+        <div class="savebtns">
+          <button id="btn-save">Save</button>
+          <button id="btn-export">Export</button>
+          <button id="btn-import">Import</button>
+          <button id="btn-reset" class="danger">Reset</button>
+        </div>
+        <div class="saveinfo" id="saveinfo"></div>
+      </div>
+      </div><!-- /clicker-col -->
+
+      <div class="stats">
+        <h3>Concession Report</h3>
+        <ul id="statlist"></ul>
+      </div>
+      </div><!-- /left-top -->
+    </section>
+
+    <section class="right">
+      <div class="tabs">
+        <button data-tab="gen" class="on">Generators</button>
+        <button data-tab="up">Upgrades <span class="badge" id="upbadge">0</span></button>
+        <button data-tab="ach">Trophies <span class="badge" id="achbadge">0</span></button>
+      </div>
+      <div class="tabpane" id="pane-gen"></div>
+      <div class="tabpane" id="pane-up" hidden></div>
+      <div class="tabpane" id="pane-ach" hidden></div>
+    </section>
+  </main>
+
+  <div class="ticker"><div class="ticker-track" id="ticker"></div></div>
+</div>
+
+<div class="fxlayer" id="fxlayer"></div>
+<div class="golden-layer" id="goldenlayer"></div>
+<div class="toast-wrap" id="toasts"></div>
+<button class="upnudge" id="upnudge" hidden>🎉 Upgrades ready <span class="arw">↓</span></button>
+
+<div class="modal-back" id="modalback" hidden>
+  <div class="modal" role="dialog" aria-modal="true">
+    <h3 id="modaltitle"></h3>
+    <div id="modalbody"></div>
+    <div class="modal-actions" id="modalactions"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
