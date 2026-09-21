@@ -152,7 +152,7 @@ const $ = id => document.getElementById(id);
 const el = {
   bank:$('bank'), cps:$('cps'), clickval:$('clickval'), buff:$('buff'),
   clicker:$('clicker'), statlist:$('statlist'), saveinfo:$('saveinfo'),
-  paneGen:$('pane-gen'), paneUp:$('pane-up'), paneAch:$('pane-ach'),
+  paneGen:$('pane-gen'), paneUp:$('pane-up'), paneAch:$('pane-ach'), buymode:$('buymode'),
   upbadge:$('upbadge'), achbadge:$('achbadge'), upnudge:$('upnudge'),
   fx:$('fxlayer'), golden:$('goldenlayer'), toasts:$('toasts'), ticker:$('ticker'),
   modalback:$('modalback'), modaltitle:$('modaltitle'), modalbody:$('modalbody'), modalactions:$('modalactions'),
@@ -456,6 +456,7 @@ function activateTab(name){
   currentTab=name;
   document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on', x.dataset.tab===name));
   el.paneGen.hidden = name!=='gen'; el.paneUp.hidden = name!=='up'; el.paneAch.hidden = name!=='ach';
+  el.buymode.hidden = name!=='gen';
 }
 document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>activateTab(b.dataset.tab)));
 el.upnudge.addEventListener('click',()=>{

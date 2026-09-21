@@ -34,13 +34,6 @@
       </div>
 
       <div class="controls">
-        <div class="buymode" role="group" aria-label="Buy quantity">
-          <span>Buy</span>
-          <button data-buy="1" class="on">×1</button>
-          <button data-buy="10">×10</button>
-          <button data-buy="100">×100</button>
-          <button data-buy="max">Max</button>
-        </div>
         <div class="savebtns">
           <button id="btn-save">Save</button>
           <button id="btn-export">Export</button>
@@ -51,10 +44,10 @@
       </div>
       </div><!-- /clicker-col -->
 
-      <div class="stats">
-        <h3>Concession Report</h3>
+      <details class="stats">
+        <summary>Concession Report</summary>
         <ul id="statlist"></ul>
-      </div>
+      </details>
       </div><!-- /left-top -->
     </section>
 
@@ -63,6 +56,13 @@
         <button data-tab="gen" class="on">Generators</button>
         <button data-tab="up">Upgrades <span class="badge" id="upbadge">0</span></button>
         <button data-tab="ach">Trophies <span class="badge" id="achbadge">0</span></button>
+      </div>
+      <div class="buymode" id="buymode" role="group" aria-label="Buy quantity">
+        <span>Buy</span>
+        <button data-buy="1" class="on">×1</button>
+        <button data-buy="10">×10</button>
+        <button data-buy="100">×100</button>
+        <button data-buy="max">Max</button>
       </div>
       <div class="tabpane" id="pane-gen"></div>
       <div class="tabpane" id="pane-up" hidden></div>
