@@ -15,6 +15,7 @@ img{max-width:100%} [hidden]{display:none!important}
 *{box-sizing:border-box}
 html,body{margin:0}
 body{
+  touch-action:manipulation;
   font-family:"Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color:var(--cream);
   background:
@@ -96,6 +97,7 @@ h1{
   font-size:calc(var(--sz)*0.5); line-height:1;
   display:grid; place-items:center; user-select:none;
   transition:transform .08s ease;
+  touch-action:manipulation;
 }
 .clicker:hover{ transform:scale(1.03); }
 .clicker:active{ transform:scale(.94); }
